@@ -8,12 +8,6 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials-id')
     }
     stages {
-        // stage('Print kube config file location') {
-        //     steps {
-        //         sh 'cd ~/.kube/'
-        //         sh 'll'
-        //     }
-        // }        
         stage ('Build') {
             steps {
                 sh 'mvn clean package'
